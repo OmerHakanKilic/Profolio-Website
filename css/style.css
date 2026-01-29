@@ -51,3 +51,42 @@ p {
 	background-color: var(--foreground-color);
 	padding: 2rem;
 }
+
+.Resume-Container {
+	background-color: var(--background-color);
+	color: var(--shadow-color);
+	padding: 2rem;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+.Resume-Title {
+	text-align: center;
+	font-size: var(--heading-size);
+	color: var(--foreground-color);
+	margin-bottom: 2rem;
+}
+
+.Resume-Section {
+	background-color: var(--foreground-color);
+	padding: 2rem;
+	margin-bottom: 2rem;
+}
+
+.Projects-Container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 2rem;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.Project-Card {
+	background-color: var(--background-color);
+	color: var(--shadow-color);
+	padding: 2rem;
+	width: 300px;
+	margin-bottom: 2rem;
+}
+
