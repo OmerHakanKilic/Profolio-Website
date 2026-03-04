@@ -5,18 +5,26 @@
 	--foreground-color: #a3a29a;
 
 	--base-font-size: 1.1rem;
-	/* Slightly larger than standard (approx 17.6px) */
 	--heading-size: 2.5rem;
-	/* Large, clear titles */
+}
+
+* {
+	box-sizing: border-box;
 }
 
 body {
 	background-color: var(--shadow-color);
 	font-size: var(--base-font-size);
+	margin: 0;
+	padding: 0;
 }
 
 p {
 	line-height: 1.6rem;
+}
+
+a {
+	color: var(--accent-color);
 }
 
 .Top-Bar {
@@ -27,29 +35,77 @@ p {
 	align-items: center;
 	margin: 2rem;
 	gap: 10%;
+	flex-wrap: wrap;
 }
 
 .Nav-Button {
 	background-color: var(--foreground-color);
 	color: var(--shadow-color);
-	padding: 2rem;
-	font-size: var(--heading-size);
+	padding: 1rem 2rem;
+	font-size: 1.2rem;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.Nav-Button:hover {
+	background-color: var(--accent-color);
 }
 
 .Biography-Container {
 	background-color: var(--background-color);
 	color: var(--shadow-color);
 	display: flex;
-	align-items: center;
-	gap: 20px;
+	align-items: flex-start;
+	gap: 2rem;
 	margin-left: 20%;
 	margin-right: 20%;
 	padding: 2rem;
+	flex-wrap: wrap;
+}
+
+.Profile-Photo {
+	max-width: 300px;
+	width: 100%;
+	height: auto;
+}
+
+.Biography-Text-Group {
+	flex: 1;
+	min-width: 250px;
+}
+
+.Biography-Title {
+	font-size: var(--heading-size);
+	color: var(--foreground-color);
+	margin-top: 0;
 }
 
 .Biography-Text {
 	background-color: var(--foreground-color);
-	padding: 2rem;
+	padding: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+
+.Contact-Info {
+	background-color: var(--foreground-color);
+	padding: 1.5rem;
+}
+
+.Contact-Info h2 {
+	margin-top: 0;
+	font-size: 1.5rem;
+}
+
+.Contact-Info ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.Contact-Info li {
+	margin-bottom: 0.5rem;
+	padding: 0.25rem 0;
 }
 
 .Resume-Container {
@@ -69,24 +125,197 @@ p {
 
 .Resume-Section {
 	background-color: var(--foreground-color);
-	padding: 2rem;
-	margin-bottom: 2rem;
+	padding: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+
+.Resume-Section h2 {
+	margin-top: 0;
+	font-size: 1.5rem;
+	border-bottom: 2px solid var(--background-color);
+	padding-bottom: 0.5rem;
+}
+
+.Resume-Item {
+	margin-bottom: 1.5rem;
+}
+
+.Resume-Item:last-child {
+	margin-bottom: 0;
+}
+
+.Resume-Item h3 {
+	margin: 0 0 0.5rem 0;
+	font-size: 1.2rem;
+}
+
+.Resume-Date {
+	font-weight: bold;
+	color: var(--accent-color);
+	margin: 0 0 0.5rem 0;
+}
+
+.Degree {
+	font-weight: bold;
+	margin: 0 0 1rem 0;
+}
+
+.Course {
+	margin-top: 1rem;
+	padding-left: 1rem;
+	border-left: 3px solid var(--accent-color);
+}
+
+.Course h4 {
+	margin: 0 0 0.5rem 0;
+	font-size: 1rem;
+}
+
+.Skills-List {
+	list-style: disc;
+	padding-left: 1.5rem;
+}
+
+.Skills-List li {
+	margin-bottom: 0.25rem;
 }
 
 .Projects-Container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	gap: 2rem;
+	padding: 2rem;
 	margin-left: 10%;
 	margin-right: 10%;
+}
+
+.Projects-Title {
+	text-align: center;
+	font-size: var(--heading-size);
+	color: var(--foreground-color);
+	margin-bottom: 2rem;
+}
+
+.Projects-Grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+	justify-items: center;
 }
 
 .Project-Card {
 	background-color: var(--background-color);
 	color: var(--shadow-color);
-	padding: 2rem;
-	width: 300px;
-	margin-bottom: 2rem;
+	padding: 1.5rem;
+	width: 100%;
+	max-width: 350px;
+	display: flex;
+	flex-direction: column;
 }
 
+.Project-Card h3 {
+	margin: 0 0 0.5rem 0;
+	font-size: 1.3rem;
+}
+
+.Project-Date {
+	font-weight: bold;
+	color: var(--accent-color);
+	margin: 0 0 1rem 0;
+}
+
+.Project-Description {
+	flex: 1;
+	margin-bottom: 1rem;
+}
+
+.Project-Run-Button {
+	display: inline-block;
+	background-color: var(--foreground-color);
+	color: var(--shadow-color);
+	padding: 0.75rem 1.5rem;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	align-self: flex-start;
+	transition: background-color 0.3s ease;
+}
+
+.Project-Run-Button:hover {
+	background-color: var(--accent-color);
+}
+
+@media (max-width: 1024px) {
+	.Projects-Grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.Biography-Container {
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+
+	.Resume-Container {
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+
+	.Projects-Container {
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+}
+
+@media (max-width: 768px) {
+	.Top-Bar {
+		margin: 1rem;
+		gap: 0.5rem;
+	}
+
+	.Nav-Button {
+		padding: 0.75rem 1rem;
+		font-size: 1rem;
+	}
+
+	.Biography-Container {
+		flex-direction: column;
+		margin-left: 5%;
+		margin-right: 5%;
+		padding: 1rem;
+	}
+
+	.Profile-Photo {
+		max-width: 200px;
+		margin: 0 auto;
+	}
+
+	.Biography-Title {
+		font-size: 1.8rem;
+	}
+
+	.Biography-Text,
+	.Contact-Info {
+		padding: 1rem;
+	}
+
+	.Resume-Container {
+		margin-left: 5%;
+		margin-right: 5%;
+		padding: 1rem;
+	}
+
+	.Resume-Section {
+		padding: 1rem;
+	}
+
+	.Projects-Container {
+		margin-left: 5%;
+		margin-right: 5%;
+		padding: 1rem;
+	}
+
+	.Projects-Grid {
+		grid-template-columns: 1fr;
+	}
+
+	.Project-Card {
+		max-width: 100%;
+	}
+}

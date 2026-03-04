@@ -1,0 +1,7 @@
+# Agent and documentation files
+AGENTS.md
+SPEC.md
+assets/Resume.md
+
+# Launch scripts
+launch_website.bash

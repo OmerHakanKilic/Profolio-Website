@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Hakan's Portfolio Website</title>
+	<title>Projects - Hakan's Portfolio</title>
 	<link rel="stylesheet" href="/css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -14,21 +14,29 @@
 		<a href="resume.html"><button class="Nav-Button">Resume</button> </a>
 		<a href="projects.html"><button class="Nav-Button">Projects</button></a>
 	</nav>
-	<section class="Projects-Container">
-		<div class="Project-Card">
-			<h3>My small shell</h3>
-			<p>A short description of the project and the tech used.</p>
-			<a href="project-view-1.html"><button class="Nav-Button">Launch App</button></a>
+	<main class="Projects-Container">
+		<h1 class="Projects-Title">Projects</h1>
+		<div class="Projects-Grid">
+			<article class="Project-Card">
+				<h3>Simple Shell</h3>
+				<p class="Project-Date">August 2025</p>
+				<p class="Project-Description">A C program that simulates a simple shell with support for ls, cat, cd, echo, pwd, and help commands. Creates subprocesses to execute commands.</p>
+				<a href="#" class="Project-Run-Button">Run</a>
+			</article>
+			<article class="Project-Card">
+				<h3>Game of Life Clone</h3>
+				<p class="Project-Date">September 2025</p>
+				<p class="Project-Description">Conway's Game of Life recreation using C and Raylib. Manages 1600 structs by simulating, updating and rendering cells to the screen.</p>
+				<a href="#" class="Project-Run-Button">Run</a>
+			</article>
+			<article class="Project-Card">
+				<h3>Idle Miner</h3>
+				<p class="Project-Date">March 2025</p>
+				<p class="Project-Description">A mobile idle game developed in Godot using GDScript. Created for a university assignment in 4 weeks. Final grade: A5.</p>
+				<a href="#" class="Project-Run-Button">Run</a>
+			</article>
 		</div>
-		<div class="Project-Card">
-			<h3>Project 2</h3>
-			<p>A short description of the project and the tech used.</p>
-			<a href="#"><button class="Nav-Button">Launch App</button></a>
-		</div>
-		<div class="Project-Card">
-			<h3>Project 3</h3>
-			<p>A short description of the project and the tech used.</p>
-			<a href="#"><button class="Nav-Button">Launch App</button></a>
-		</div>
-	</section>
+	</main>
 </body>
+
+</html>
